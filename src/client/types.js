@@ -1,0 +1,5 @@
+export const types = {
+    SET_DEPLOYMENT: 'SET_DEPLOYMENT',
+    SET_TEMPLATE: 'SET_TEMPLATE',
+    SET_IS_ADDING: 'SET_IS_ADDING',
+}
