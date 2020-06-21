@@ -34,7 +34,7 @@ const AddDeployment = (props) => {
         let isError = false;
         let newErrorObj = {};
         Object.keys(dataObj).map((cur, index) => {
-            if (dataObj[cur] == '' || (cur == 'url' && !isValidUrl(dataObj[cur]))) {
+            if (dataObj[cur] === '' || (cur == 'url' && !isValidUrl(dataObj[cur]))) {
                 isError = true;
                 newErrorObj[cur] = true;
             }

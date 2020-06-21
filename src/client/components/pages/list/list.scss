@@ -24,38 +24,38 @@
                 margin-right: 20px;
             }
         }
-        .each-item{
-            display: flex;
-            text-align: left;
-            align-items: center;
-            height: 55px;
-            border-bottom: 1px solid #EDEDED;
-            div{
-                margin-right: 20px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            .link-text{
-                cursor: pointer;
-                color: #1390D3;
-                font-size: .875rem;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-        .adding-deployment{
-            height: 2px;
-            width: 0%;
-            background: #1390D3;
-            margin-right: 0;
-        }
         &.is-adding{
             .each-item:last-child{
                 display: none;
             }
         }
+    }
+    .each-item, .adding-field{
+        display: flex;
+        text-align: left;
+        align-items: center;
+        height: 55px;
+        border-bottom: 1px solid #EDEDED;
+        div{
+            margin-right: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .link-text{
+            cursor: pointer;
+            color: #1390D3;
+            font-size: .875rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .adding-deployment{
+        height: 2px;
+        width: 0%;
+        background: #1390D3;
+        margin-right: 0;
     }
 }
 .width-42{ width: 42%; }

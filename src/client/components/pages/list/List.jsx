@@ -20,7 +20,7 @@ const List = (props) => {
     }
 
     const showUpload = () => {
-        let timeInterval = Math.floor(Math.random() * 20) + 1;
+        let timeInterval = Math.floor(Math.random() * 10) + 1;
         let progress = Math.ceil(100 / timeInterval);
         let oldValue = 0;
 
@@ -42,6 +42,7 @@ const List = (props) => {
 
     useEffect(() => {
         if (props.isAdding) {
+            setAddingWidth(0);
             showUpload();
         }
     }, [props.isAdding])
@@ -49,7 +50,7 @@ const List = (props) => {
     return (
         <div className='list-container'>
             <h3>All Deployments</h3>
-            {props.deployments.length ? <div className={`list-holder ${props.isAdding ? 'is-adding' : ''}`}>
+            {props.deployments.length ? <><div className={`list-holder ${props.isAdding ? 'is-adding' : ''}`}>
                 <div className='heading'>
                     <div className='width-8'>Index</div>
                     <div className='width-42'>URL</div>
@@ -68,8 +69,9 @@ const List = (props) => {
                         <div className='width-10 link-text' onClick={() => onDelete(cur._id)}>Delete</div>
                     </div>
                 })}
-                {props.isAdding ? <div className='each-item'><div className='adding-deployment' style={{ width: addingWidth + '%' }}></div></div> : null}
-            </div> : <div className='no-result'>
+            </div>
+                {props.isAdding ? <div className='adding-field'><div className='adding-deployment' style={{ width: addingWidth + '%' }}></div></div> : null}
+            </> : <div className='no-result'>
                     <h4>No Deployments Found! Click Below to Add</h4>
                 </div>}
             <div className='footer-btn-holder'>
