@@ -25,6 +25,7 @@
             }
         }
         &.is-adding{
+            padding-bottom: 0;
             .each-item:last-child{
                 display: none;
             }
@@ -50,6 +51,9 @@
                 text-decoration: underline;
             }
         }
+    }
+    .adding-field{
+        margin-bottom: 20px;
     }
     .adding-deployment{
         height: 2px;
